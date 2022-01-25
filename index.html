@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>tintu</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/jpeg;base64,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" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Laura - v4.3.0
+  * Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      
+      <h1>I'm Tintu</h1>
+      <h2>Software Developer</h2>
+      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Me Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <span>About Me</span>
+          <h2>About Me</h2>
+          
+        </div>
+
+        <div class="row">
+          
+          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start">
+            <img src="C:\Users\hp\Documents\ss\assets\img\ikk.jpg" alt="" class='"width:200'>
+          </div>
+          <div class="col-lg-8 d-flex flex-column align-items-stretch">
+
+            <div class="content ps-lg-4 d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Tintu Joseph</span></li>
+                    
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 8921804013</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kottayam, Kerala</span></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>thintujoseph98@gmail.com
+                    </span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <p>      <p>Hello,<br>
+                I'm Tintu and I enjoy learn new things that developed in the internet. <em>My interest in both mobile and web application development started back in 2021.Now I'm working inLuminar Technolab as a flutter developer intern.</em></p>
+             
+            </div><!-- End .content-->
+
+            <div class="skills-content ps-lg-4">
+              <div class="progress">
+                <span class="skill">HTML <i class="val">56%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Dart <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CSS <i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">55%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Java <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">C<i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Me Section -->
+
+    <!-- ======= My Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Resume</span>
+          <h2>My Resume</h2>
+          
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              
+              <h4>Tintu Joseph</h4>
+              <p><em>I'm a self taught flutter developer based in Kottayam .I love to develop mobile application. AS a flutter developer I can provide you with my full skill to developing any type application within a short time compared to any other native app developers out there</em></p>
+              <p>
+              <ul>
+                <li>Kottayam</li>
+                <li>+91 8921809014</li>
+                <li>thintujoseph98@gmail.com</li>
+              </ul>
+              </p>
+                
+              </p>
+            </div>
+            
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor Of  Technology </h4>
+              <h5>2016 - 2020</h5>
+              <p><em>Kottayam Institute Of Technology & Science</em></p>
+              <p>Bachelor's degree in Computer Science & Eng. From Kottayam Institute Of Technology & Science </p>
+            </div>
+            <div class="resume-item">
+              <h4>Plus Two</h4>
+              <h5>2016 - 2018</h5>
+              <p><em>Gov.H.S.S Panamattom</em></p>
+              <p>Completed Plus two from Gov.H.S.S, Panamattom </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Intern at Luminar Technolab</h4>
+              <h5>2021 - Present</h5>
+              <p><em>Infopark,Kochi </em></p>
+              <p>
+              <ul>
+                <li>Currently doing an internship as flutter developer at Luminar Technolab </li>
+                
+               
+              </ul>
+              </p>
+            </div>
+            <div class="resume-item">
+             
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+            
+    <!-- ======= My Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Services</span>
+          <h2>My Services</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+         
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-mobile-alt' ></i></div>
+              <h4 class="title"><a href="">Mobile App Developement</a></h4>
+              <p class="description">I  can help you make your customerfriendly Apps .
+                I build low cost application in less time without any compromise in quality</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Application Services</a></h4>
+              <p class="description">From the <base href=""> of new applications, through development, deploy, management and maintenance, I cover all stages of the application lifecycle.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-message-alt-error'></i></div>
+              <h4 class="title"><a href="">IT Consulting</a></h4>
+              <p class="description">I can help you to gain a better knowledge of your IT environment i your business to achive business goals and objectives.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End My Services Section -->
+
+   
+
+    <!-- ======= My Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Portfolio</span>
+          <h2>My Portfolio</h2>
+          
+        </div>
+
+        <!-- <ul id="portfolio-flters" class="d-flex justify-content-center">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul> -->
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="C:\Users\hp\Downloads\sarang\assets\img\pc.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>works</h4>
+              <p>1</p>
+             
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="https://media.istockphoto.com/photos/digital-binary-code-concept-picture-id1032524474?k=20&m=1032524474&s=612x612&w=0&h=wkLnbrDsSxtqwdt1_kOoyggrUUwrK537tojnwJNclWY=" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Up Comming Projects</h4>
+              <p>3</p>
+             
+            </div>
+
+          </div>
+
+         
+             
+           
+             
+            </div>
+
+          </div>
+
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>-->
+
+      </div> 
+    </section><!-- End My Portfolio Section -->
+
+  
+
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact Me</span>
+          <h2>Contact Me</h2>
+          
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social Profiles</h3>
+                  <div class="social-links">
+                    <a href="https://twitter.com/thintujoseph98" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/tintu.mol.75839/" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/devil_ikkuzz/" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCu_GFmFYHxhZPHZHKbU7OpQ" class="google-plus"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/tintu-joseph-040712182/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Me</h3>
+                  <p>thintujospeph98@gmail.com.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Me</h3>
+                  <p>+91 8921804013</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <form
+  action="https://formspree.io/f/mgedobyo"
+  method="POST">
+>
+              <input type="text" name="name" id="name"placeholder=" Name"
+                  style="padding-left: 20px;"><br><br>
+              <input type="email" name="email" id="email" placeholder="_replyto"
+                  style="padding-left: 20px;"><br><br>
+              <textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message"
+                  style="padding-left: 20px;"></textarea><br><br>
+              <input type="submit" value="SEND MESSAGE" class="submitbutton text-white" id="submitbutton"><br>
+          </form>
+
+
+
+            <!-- <form class="contact-form" action="">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="fname" class="form-control"  placeholder="First Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="lname"  placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="email" class="form-control" name="emailAdress" placeholder="Email" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="number" class="form-control" name="contactNum" placeholder="Contact number" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="enquirY" rows="6" placeholder="Message" required></textarea>
+              </div>
+              <br>
+          
+              <div class="text-center"><button type="submit" style="background:#ffb727; font-family: Raleway, sans-serif;">Send Message</button></div>
+            </form> -->
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Me Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    
+    <div class="container">
+    
+      <h3>tintu</h3>
+      
+        
+        </p>
+      <div class="social-links">
+        <a href="https://twitter.com/thintujoseph98" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/tintu.mol.75839/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/devil_ikkuzz/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCu_GFmFYHxhZPHZHKbU7OpQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/tintu-joseph-040712182/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>2022 Tintu</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+         <a href="https://bootstrapmade.com/"></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  
+ <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="forms/form.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+</script>
+</html>
